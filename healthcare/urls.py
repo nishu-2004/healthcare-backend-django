@@ -40,4 +40,4 @@ urlpatterns = [
 ]
 
 
-# Access token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY1NjM5NjY2LCJpYXQiOjE3NjU2MzkzNjYsImp0aSI6IjI4OTNjYzNmZjkxOTQxMmE4MmJkNTViMGFmY2UwZmI2IiwidXNlcl9pZCI6IjIifQ.P-uHzxzr9Ts2o9-XhmGzhfrzJh_gNPspwwsBZedDoMU
+# Access token

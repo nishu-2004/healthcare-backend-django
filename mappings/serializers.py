@@ -21,8 +21,6 @@ class PatientDoctorMappingCreateSerializer(serializers.ModelSerializer):
         model = PatientDoctorMapping
         fields = ('patient', 'doctor', 'reason_for_assignment', 'is_active')
 
-
-# Add the missing serializer
 class PatientWithDoctorsSerializer(serializers.Serializer):
     patient_id = serializers.IntegerField()
     patient_name = serializers.CharField()
