@@ -17,11 +17,27 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework_simplejwt.views import TokenObtainPairView
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-
-    path('api/auth/register/',include('accounts.urls')),
-    path('api/auth/login/',TokenObtainPairView.as_view()),
+    
+    # Authentication
+    path('api/auth/', include('accounts.urls')),
+    
+    # Patient CRUD
+    path('api/patients/', include('patients.urls')),
+    
+    # Doctor CRUD
+    path('api/doctors/', include('doctors.urls')),
+    
+    # Mappings
+    path('api/mappings/', include('mappings.urls')),
+    
+    # JWT Token endpoints
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
+
+
+# Access token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY1NjM5NjY2LCJpYXQiOjE3NjU2MzkzNjYsImp0aSI6IjI4OTNjYzNmZjkxOTQxMmE4MmJkNTViMGFmY2UwZmI2IiwidXNlcl9pZCI6IjIifQ.P-uHzxzr9Ts2o9-XhmGzhfrzJh_gNPspwwsBZedDoMU
