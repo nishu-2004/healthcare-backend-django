@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'patients',
     'doctors',
     'mappings',
+    'appointments',
 ]
 
 # REST Framework settings
